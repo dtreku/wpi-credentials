@@ -1,0 +1,43 @@
+{
+  "name": "wpi-credentials",
+  "version": "0.1.0",
+  "description": "Oracle-verified blockchain credentials for project-based higher education. Built at WPI with Chainlink Functions.",
+  "license": "MIT",
+  "author": "WPI FinTech Lab",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wpi-fintech-lab/wpi-credentials"
+  },
+  "keywords": [
+    "blockchain",
+    "credentials",
+    "verifiable-credentials",
+    "soulbound",
+    "chainlink",
+    "oracle",
+    "education",
+    "nft",
+    "erc721",
+    "wpi"
+  ],
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "coverage": "hardhat coverage",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "deploy:local": "hardhat run scripts/deploy.js --network hardhat",
+    "issue": "hardhat run scripts/issue-credential.js --network sepolia",
+    "lint": "solhint 'contracts/**/*.sol'",
+    "clean": "hardhat clean"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "dotenv": "^16.4.0",
+    "hardhat": "^2.22.0",
+    "solhint": "^4.5.0"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^1.1.0",
+    "@openzeppelin/contracts": "^5.0.0"
+  }
+}
